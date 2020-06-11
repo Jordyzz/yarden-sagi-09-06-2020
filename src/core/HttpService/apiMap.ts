@@ -6,7 +6,7 @@ const forecastPrefix =
   'https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/forecasts/v1/daily';
 const conditionPrefix =
   'https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/currentconditions/v1';
-const apiKey = 'sH9kf2u31sJIBg4HnRPzR8fnb4NT3mnl';
+const apiKey = 'iod5RG1QNR86v3jH7RzmCIGe0xBUnpNA';
 
 export const apiMap: ApiMap = {
   locationAutoComplete: {
