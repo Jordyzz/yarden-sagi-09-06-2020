@@ -44,6 +44,7 @@ class WeatherService {
       });
   }
 
+  /* Server to local */
   private prepareCurrentWeather(key: string, name: string, currentWeather: any) {
     return {
       id: key,
@@ -74,7 +75,7 @@ class WeatherService {
       });
   }
 
-  // Server to local
+  /* Server to local */
   private prepareDailyForecast(forecast: any) {
     return forecast.map(day => ({
       date: day.Date,

@@ -20,24 +20,22 @@ class HttpService {
         url: this.getUrl(cfg),
         data: cfg.data,
         method: apiMap[cfg.type].method
-      })
-        .then(
-          res => {
-            if (!cfg.disableBI) {
-              dispatch(decrementBusyCounter());
-            }
-            resolve(res.data);
-          },
-          err => {
-            if (!cfg.disableBI) {
-              dispatch(decrementBusyCounter());
-            }
-
-            reject(err);
-            dispatch(addError('Something went wrong...'));
+      }).then(
+        res => {
+          if (!cfg.disableBI) {
+            dispatch(decrementBusyCounter());
           }
-        )
-        .catch(err => {});
+          resolve(res.data);
+        },
+        err => {
+          if (!cfg.disableBI) {
+            dispatch(decrementBusyCounter());
+          }
+
+          reject(err);
+          dispatch(addError('Something went wrong...'));
+        }
+      );
     }) as Promise<T>;
 
     return promise;

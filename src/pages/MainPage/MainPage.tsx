@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 import styles from './MainPage.scss';
-import { MainPageProps } from './MainPage.interface';
-import Select from '@components/Select';
 import { weatherService } from '@core/WeatherService';
 import LocationForecast from '@components/LocationForecast';
 import { useSelector } from '@redux/useSelector';
-import Icon from '@components/Icon';
 
-function MainPage(props: MainPageProps) {
+function MainPage() {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [options, setOptions] = useState([]);
   const currentLocation = useSelector(state => state.currentLocation);

@@ -36,17 +36,7 @@ const customStyles = props => {
 };
 
 function Select(props) {
-  const {
-    onChange,
-    onInputChanged,
-    getOptionLabel,
-    getOptionValue,
-    options,
-    value,
-    defaultValue,
-    filterOption,
-    placeholder
-  } = props;
+  const { onChange, onInputChanged, options, value, placeholder } = props;
 
   const handleChange = newVal => {
     onChange(newVal);
@@ -69,12 +59,8 @@ function Select(props) {
       components={{
         Placeholder
       }}
-      filterOption={filterOption}
-      defaultValue={defaultValue}
       options={options}
       styles={customStyles(props)}
-      getOptionLabel={getOptionLabel}
-      getOptionValue={getOptionValue}
       onInputChange={onChangedInput}
       isClearable={true}
     />

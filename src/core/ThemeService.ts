@@ -22,6 +22,7 @@ class ThemeService {
       borderColor: '#fff'
     }
   };
+
   private vars = {
     backgroundColor: undefined,
     backgroundSecondaryColor: undefined,

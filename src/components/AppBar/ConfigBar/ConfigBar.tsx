@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './ConfigBar.scss';
-import { Switch } from '@material-ui/core';
 import { useSelector } from '@redux/useSelector';
 import { degrees } from '@src/utils/degreesSymbol';
 import { themeService } from '@core/ThemeService';

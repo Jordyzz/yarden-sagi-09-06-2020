@@ -3,7 +3,6 @@ export interface SelectProps {
   onInputChanged: (input: string) => void;
   options: Array<SelectOption>;
   value: SelectOption;
-  defaultValue?: SelectOption;
   placeholder?: string;
 }
 
