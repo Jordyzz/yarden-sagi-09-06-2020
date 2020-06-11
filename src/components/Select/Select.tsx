@@ -27,6 +27,10 @@ const customStyles = props => {
     singleValue: provided => ({
       ...provided,
       color: 'var(--fontColor)'
+    }),
+    input: provided => ({
+      ...provided,
+      color: 'var(--fontColor)'
     })
   };
 };
