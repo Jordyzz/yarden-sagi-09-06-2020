@@ -132,6 +132,7 @@ class WeatherService {
 
   getSavedFavorites() {
     const favorites = storageService.get('favorites');
+    if (!favorites) return;
     Promise.all(favorites.map(f => this.getCurrentWeather(f.id, f.name))).then(res => {
       dispatch(initFavorites(res));
     });
