@@ -14,7 +14,7 @@ class ThemeService {
     },
     dark: {
       backgroundColor: '#1c1c21',
-      backgroundSecondaryColor: '#000',
+      backgroundSecondaryColor: '#2d2d2e',
       fontColor: '#fff',
       fontSecondaryColor: '#d3d3d3',
       selectedFontColor: '#ffc53d',
