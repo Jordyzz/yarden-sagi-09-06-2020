@@ -4,7 +4,7 @@
   "description": "Herolo home task",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "node server.js",
     "build": "rimraf dist && webpack --env.NODE_ENV=prod --mode production"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
     "@material-ui/core": "^4.10.1",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
