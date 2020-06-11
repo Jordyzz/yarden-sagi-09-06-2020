@@ -4,7 +4,7 @@
   "description": "Herolo home task",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "node server.js",
     "build": "rimraf dist && webpack --env.NODE_ENV=prod --mode production"
   },
   "keywords": [],
