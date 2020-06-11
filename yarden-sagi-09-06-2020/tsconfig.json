@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@containers/*": ["src/containers/*"],
+      "@global-scss/*": ["src/global-scss/*"],
+      "@core/*": ["src/core/*"],
+      "@graphql/*": ["src/graphql/*"],
+      "@auth/*": ["src/core/auth/*"],
+      "@http/*": ["src/core/http/*"],
+      "@pages/*": ["src/pages/*"],
+      "@modals/*": ["src/modals/*"],
+      "@src/*": ["src/*"],
+      "@redux/*": ["src/redux/*"],
+      "@root/*": ["./*"]
+    },
+    "lib": ["dom", "es7"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

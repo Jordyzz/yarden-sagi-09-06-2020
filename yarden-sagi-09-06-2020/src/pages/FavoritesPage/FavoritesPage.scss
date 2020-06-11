@@ -1,0 +1,21 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.favoritesList {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+  grid-template-rows: 200px;
+  grid-gap: 20px;
+  padding: 15px;
+}
+
+.noFavorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
