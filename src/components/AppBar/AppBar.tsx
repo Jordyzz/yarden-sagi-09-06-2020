@@ -11,6 +11,7 @@ const AppBar = () => {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.title}>Herolo Weather App</div>
       <div className={styles.navigation}>
         <ConfigBar />
         {menuItems.map(item => (
