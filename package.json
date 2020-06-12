@@ -5,6 +5,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "start": "node server.js",
+    "dev": "webpack-dev-server --mode development",
     "build": "rimraf dist && webpack --env.NODE_ENV=prod --mode production"
   },
   "keywords": [],

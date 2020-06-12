@@ -4,6 +4,12 @@
   height: 100%;
 }
 
+@media (max-width: 850px) {
+  .wrapper {
+    height: unset;
+  }
+}
+
 .content {
   height: 100%;
 }
