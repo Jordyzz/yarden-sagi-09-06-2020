@@ -77,15 +77,25 @@ class WeatherService {
 
   /* Server to local */
   private prepareDailyForecast(forecast: any) {
-    return forecast.map(day => ({
-      date: day.Date,
-      description: day.Day.IconPhrase,
-      temperature: {
-        f: day.Temperature.Maximum.Value,
-        c: this.convertToCelcius(day.Temperature.Maximum.Value)
-      },
-      iconId: day.Day.Icon
-    }));
+    return forecast.map((day, idx) => {
+      const cfgObject = this.configureTempType(idx);
+
+      return {
+        date: day.Date,
+        description: day[cfgObject.timeOfDay].IconPhrase,
+        temperature: {
+          f: day.Temperature[cfgObject.temp].Value,
+          c: this.convertToCelcius(day.Temperature[cfgObject.temp].Value)
+        },
+        iconId: day[cfgObject.timeOfDay].Icon
+      };
+    });
+  }
+
+  private configureTempType(idx: number) {
+    return new Date().getHours() > 20 && idx === 0
+      ? { timeOfDay: 'Night', temp: 'Minimum' }
+      : { timeOfDay: 'Day', temp: 'Maximum' };
   }
 
   toggleFavorites(location: Favorite) {
